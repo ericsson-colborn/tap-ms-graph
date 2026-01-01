@@ -10,7 +10,8 @@ from tap_ms_graph.streams import (
     GroupsStream,
     SubscribedSkusStream,
     UsersStream,
-    UserEventsStream
+    UserEventsStream,
+    UserOnlineMeetingsStream
 )
 
 STREAM_TYPES = [
@@ -18,7 +19,8 @@ STREAM_TYPES = [
     GroupMembersStream,
     SubscribedSkusStream,
     UsersStream,
-    UserEventsStream
+    UserEventsStream,
+    UserOnlineMeetingsStream
 ]
 
 
