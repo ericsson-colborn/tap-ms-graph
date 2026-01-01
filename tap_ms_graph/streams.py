@@ -38,6 +38,7 @@ class UsersStream(MSGraphStream):
     path = "/users"
     primary_keys = ["id"]
     odata_context = "users"
+    child_context = {"id": "user_id"}
 
 
 class UserEventsStream(MSGraphChildStream):
