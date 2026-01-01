@@ -93,7 +93,7 @@ class OnlineMeetingTranscriptsStream(MSGraphChildStream):
     name = "onlineMeetingTranscripts"
     path = "/communications/onlineMeetings/{meeting_id}/transcripts"
     primary_keys = ["meeting_id", "id"]
-    odata_context = "callTranscript"
+    odata_context = "communications/onlineMeetings/transcripts"
     odata_type = "microsoft.graph.callTranscript"
 
     parent_context_schema = {
