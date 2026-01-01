@@ -13,8 +13,7 @@ from tap_ms_graph.streams import (
     UserEventsStream,
     UserOnlineMeetingsStream,
     UserOnlineMeetingTranscriptsStream,
-    OnlineMeetingsStream,
-    OnlineMeetingTranscriptsStream
+    MeetingTranscriptsStream
 )
 
 STREAM_TYPES = [
@@ -24,8 +23,7 @@ STREAM_TYPES = [
     UsersStream,
     UserEventsStream,
     UserOnlineMeetingsStream,
-    OnlineMeetingsStream,
-    OnlineMeetingTranscriptsStream,
+    MeetingTranscriptsStream,
     UserOnlineMeetingTranscriptsStream
 ]
 
