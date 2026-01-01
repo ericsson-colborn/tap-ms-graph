@@ -66,17 +66,17 @@ class UserOnlineMeetingsStream(MSGraphChildStream):
         "meeting_id": {"type": "string"},
     }
 
-# class UserOnlineMeetingTranscriptsStream(MSGraphChildStream):
-#     parent_stream_type = UsersStream
-#     name = "userOnlineMeetingTranscripts"
-#     path = "/users/{user_id}/onlineMeetings/{meeting_id}/transcripts"
-#     primary_keys = ["user_id", "id"]
-#     odata_context = "users"
-#     odata_type = "microsoft.graph.onlineMeeting"
+class UserOnlineMeetingTranscriptsStream(MSGraphChildStream):
+    parent_stream_type = UsersStream
+    name = "userOnlineMeetingTranscripts"
+    path = "/users/{user_id}/onlineMeetings/{meeting_id}/transcripts"
+    primary_keys = ["user_id", "id"]
+    odata_context = "users"
+    odata_type = "microsoft.graph.onlineMeeting"
 
-#     parent_context_schema = {
-#         "user_id": {"type": "string"},
-#     }
+    parent_context_schema = {
+        "user_id": {"type": "string"},
+    }
 
 
 class OnlineMeetingsStream(MSGraphStream):
