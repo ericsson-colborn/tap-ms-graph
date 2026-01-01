@@ -71,6 +71,6 @@ class OnlineMeetingsStream(MSGraphStream):
     name = "onlineMeetings"
     path = "/communications/onlineMeetings"
     primary_keys = ["id"]
-    odata_context = "communications"
+    odata_context = "onlineMeetings"
     odata_type = "microsoft.graph.onlineMeeting"
 
