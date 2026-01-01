@@ -11,8 +11,8 @@ from tap_ms_graph.streams import (
     SubscribedSkusStream,
     UsersStream,
     UserEventsStream,
-    UserOnlineMeetingsStream,
-    UserOnlineMeetingTranscriptsStream,
+    # UserOnlineMeetingsStream,
+    UserMeetingTranscriptsStream,
     MeetingTranscriptsStream
 )
 
@@ -22,9 +22,9 @@ STREAM_TYPES = [
     SubscribedSkusStream,
     UsersStream,
     UserEventsStream,
-    UserOnlineMeetingsStream,
+    # UserOnlineMeetingsStream,
     MeetingTranscriptsStream,
-    UserOnlineMeetingTranscriptsStream
+    UserMeetingTranscriptsStream
 ]
 
 
