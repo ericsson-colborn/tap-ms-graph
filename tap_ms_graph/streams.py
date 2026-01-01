@@ -70,7 +70,7 @@ class UserEventsStream(MSGraphChildStream):
 class UserMeetingTranscriptsStream(MSGraphChildStream):
     parent_stream_type = UsersStream
     name = "userMeetingTranscripts"
-    path = "/users/{user_id}/onlineMeetings/getAllTranscripts"
+    path = "/users/{user_id}/onlineMeetings/getAllTranscripts(meetingOrganizerUserId='{user_id}')"
     primary_keys = ["user_id", "id"]
     odata_context = "communications/onlineMeetings/transcripts"
     odata_type = "microsoft.graph.callTranscript"
