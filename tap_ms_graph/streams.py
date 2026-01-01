@@ -57,7 +57,7 @@ class UserEventsStream(MSGraphChildStream):
 class UserOnlineMeetingsStream(MSGraphChildStream):
     parent_stream_type = UsersStream
     name = "userOnlineMeetings"
-    path = "/users/{user_id}/onlineMeetings/"
+    path = "/users/{user_id}/onlineMeetings"
     primary_keys = ["user_id", "id"]
     odata_context = "users"
     odata_type = "microsoft.graph.onlineMeeting"
