@@ -81,25 +81,12 @@ class UserOnlineMeetingTranscriptsStream(MSGraphChildStream):
     }
 
 
-class OnlineMeetingsStream(MSGraphStream):
-    name = "onlineMeetings"
-    path = "/communications/onlineMeetings"
+class MeetingTranscriptsStream(MSGraphStream):
+    name = "meetingTranscripts"
+    path = "/communications/onlineMeetings/getAllTranscripts"
     primary_keys = ["id"]
-    odata_context = "communications/onlineMeetings"
-    odata_type = "microsoft.graph.onlineMeeting"
-    child_context = {"id": "meeting_id"}
-
-
-class OnlineMeetingTranscriptsStream(MSGraphChildStream):
-    parent_stream_type = OnlineMeetingsStream
-    name = "onlineMeetingTranscripts"
-    path = "/communications/onlineMeetings/{meeting_id}/transcripts"
-    primary_keys = ["meeting_id", "id"]
     odata_context = "communications/onlineMeetings/transcripts"
     odata_type = "microsoft.graph.callTranscript"
-
-    parent_context_schema = {
-        "meeting_id": {"type": "string"},
-    }
+    child_context = {"id": "transcript_id"}
 
 
