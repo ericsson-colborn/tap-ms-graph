@@ -63,14 +63,41 @@ class UserOnlineMeetingsStream(MSGraphChildStream):
     odata_type = "microsoft.graph.onlineMeeting"
 
     parent_context_schema = {
-        "user_id": {"type": "string"},
+        "meeting_id": {"type": "string"},
     }
+
+# class UserOnlineMeetingTranscriptsStream(MSGraphChildStream):
+#     parent_stream_type = UsersStream
+#     name = "userOnlineMeetingTranscripts"
+#     path = "/users/{user_id}/onlineMeetings/{meeting_id}/transcripts"
+#     primary_keys = ["user_id", "id"]
+#     odata_context = "users"
+#     odata_type = "microsoft.graph.onlineMeeting"
+
+#     parent_context_schema = {
+#         "user_id": {"type": "string"},
+#     }
 
 
 class OnlineMeetingsStream(MSGraphStream):
     name = "onlineMeetings"
     path = "/communications/onlineMeetings"
     primary_keys = ["id"]
-    odata_context = "onlineMeetings"
+    odata_context = "communications/onlineMeetings"
     odata_type = "microsoft.graph.onlineMeeting"
+    child_context = {"id": "meeting_id"}
+
+
+class OnlineMeetingTranscriptsStream(MSGraphChildStream):
+    parent_stream_type = OnlineMeetingsStream
+    name = "onlineMeetingTranscripts"
+    path = "/communications/onlineMeetings/{meeting_id}/transcripts"
+    primary_keys = ["meeting_id", "id"]
+    odata_context = "callTranscript"
+    odata_type = "microsoft.graph.callTranscript"
+
+    parent_context_schema = {
+        "meeting_id": {"type": "string"},
+    }
+
 
