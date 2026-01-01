@@ -6,13 +6,13 @@ from singer_sdk import Stream, Tap
 from singer_sdk import typing as th
 
 from tap_ms_graph.streams import (
-    GroupMembersStream,
-    GroupsStream,
-    SubscribedSkusStream,
-    UsersStream,
-    UserEventsStream,
-    UserOnlineMeetingsStream,
-    OnlineMeetingsStream,
+    # GroupMembersStream,
+    # GroupsStream,
+    # SubscribedSkusStream,
+    # UsersStream,
+    # UserEventsStream,
+    # UserOnlineMeetingsStream,
+    # OnlineMeetingsStream,
     OnlineMeetingTranscriptsStream
 )
 
